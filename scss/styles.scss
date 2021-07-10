@@ -1,0 +1,296 @@
+/*******************  STYLES *******************/
+
+@import "colors";
+
+a {
+  color: black;
+  text-decoration: none;
+  padding: 4px;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+article {
+  border: 1px solid $primary;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+aside {
+  grid-area: aside;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+
+body {
+  background-image: url("../img/pecan-bbbbbb.svg");
+  background-position-y: bottom;
+  background-repeat: repeat-x;
+  background-size: 5%;
+  background-color: $background;
+  font-family: 'Baloo 2', sans-serif;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1 {
+  color: $primary;
+  text-align: center;
+}
+
+h3 {
+  color: $primary;
+}
+
+main {
+  grid-area: main;
+  justify-self: center;
+}
+
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+
+    li:hover {
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+}
+
+section {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+  
+
+/******************* CLASS STYLES *******************/
+
+.go-home {
+  margin: 0;
+  padding: 0;
+}
+
+.price {
+  margin: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: $white;
+  font-weight: bolder;
+  color: $primary;
+}
+
+.product {
+  border: solid 1px $primary;
+  border-radius: 100%;
+}
+
+.product-128 {
+  height: 128px;
+  width: 128px;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 120%;
+  font-variant-caps: all-petite-caps;
+  min-height: 90px;
+  max-height: 90px;
+}
+
+/******************* ELEMENT STYLES *******************/
+#banner {
+  grid-area: banner;
+  justify-content: space-evenly;
+  background: linear-gradient(180deg, rgba(134, 88, 88, 1) 0%, rgba(226, 213, 213, 1) 100%);
+}
+
+#banner-image {
+  border-radius: 25px;
+}
+
+#campos-pecan {
+  font-family: 'Lobster', cursive;
+  font-size: xxx-large;
+  align-self: center;
+  padding-right: 5%;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "banner banner"
+    "menu menu"
+    "aside main"
+    "footer footer";
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+#grid-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "banner""menu""main""footer";
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+#menu {
+  grid-area: menu;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+/******************* RECETAS *******************/
+#detalle-receta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:  "nombre         nombre          nombre"
+                        "image          tiempo          tiempo"
+                        "image          porciones       porciones"
+                        "image          fuente          fuente"
+                        "ingredientes   preparacion     preparacion";
+}
+
+#receta-nombre {
+  grid-area: nombre;
+}
+
+#receta-label-fuente {
+  grid-area: fuente;
+}
+
+#receta-imagen {
+  grid-area: image;
+  justify-self: center;
+  border: 2px solid $secondary;
+  border-radius: 100%;
+}
+
+#receta-label-tiempo {
+  grid-area: tiempo;
+}
+
+#receta-label-porciones {
+  grid-area: porciones;
+}
+
+#receta-ingredientes {
+  grid-area: ingredientes;
+}
+
+#receta-preparacion {
+  grid-area: preparacion;
+}
+
+/******************* CONTACT FORM *******************/
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+#contact-form-datos {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "labelNombre inputNombre inputNombre"
+      "labelEmail inputEmail inputEmail"
+      "labelResidencia inputResidencia inputResidencia"
+      "labelConsumidorHabitual labelConsumidorHabitual inputConsumidorHabitual"
+      "labelNotificaciones labelNotificaciones checkNotificaciones";
+  column-gap: 50px;
+}
+
+#label-nombre {
+  grid-area: labelNombre;
+}
+
+#input-nombre {
+  grid-area: inputNombre;
+}
+
+#label-email {
+  grid-area: labelEmail;
+}
+
+#input-email {
+  grid-area: inputEmail;
+}
+
+#label-residencia {
+  grid-area: labelResidencia;
+}
+
+#input-residencia {
+  grid-area: inputResidencia;
+}
+
+#label-consumidor-habitual {
+  grid-area: labelConsumidorHabitual;
+}
+
+#input-consumidor-habitual {
+  grid-area: inputConsumidorHabitual;
+}
+
+#aaarecibir-notificaciones {
+  grid-area: recibirNotificaciones;
+}
+
+#label-recibir-notificaciones {
+  grid-area: labelNotificaciones;
+}
+
+#check-recibir-notificaciones {
+  grid-area: checkNotificaciones;
+}
+
+#contact-form-mensaje {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "labelMensaje""inputMensaje";
+  row-gap: 10px;
+  column-gap: 10px;
+  align-items: flex-start;
+}
+
+#label-mensaje {
+  grid-area: labelMensaje;
+}
+
+#input-mensaje {
+  grid-area: inputMensaje;
+}
+
+#contact-form-button-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
