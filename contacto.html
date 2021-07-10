@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="grid-content">
+
+        <a href="./index.html" class="go-home">
+        <header id="banner">
+          <div id="logo">
+            <img id="banner-image" src="./img/pecan-pie.png" alt="Logo" />
+            <h1 id="campos-pecan">Campos de Pecán</h1>
+          </div>
+        </header>
+        
+    
+        <nav id="menu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+              <li><a href="./productos.html">Productos</a></li>
+              <li><a href="./propiedades.html">Propiedades</a></li>
+              <li><a href="./recetas.html">Recetas</a></li>
+              <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+    
+        <main>
+          <h1>Contacto</h1>
+          <form action="mailto:virginiabauk@gmail.com" method="POST">
+            <!-- Datos del contacto-->
+            <fieldset>
+              <legend>Tus datos</legend>
+              <div id="contact-form-datos">
+                <label for="nombre" id="label-nombre">Tu nombre:</label>
+                <input type="text" id="input-nombre" />
+    
+                <label for="mail" id="label-email">Tu e-mail:</label>
+                <input type="email" id="input-email" />
+    
+                <label for="zona" id="label-residencia">¿Dónde resides?: </label>
+                <select id="input-residencia">
+                  <option value="ar">Argentina</option>
+                  <option value="bo">Bolivia</option>
+                  <option value="ch">Chile</option>
+                  <option value="co">Colombia</option>
+                  <option value="pe">Perú</option>
+                  <option value="uy">Uruguay</option>
+                </select>
+    
+                <label for="consumidor-habitual" id="label-consumidor-habitual">¿Sos consumidor habitual de nuestros
+                  productos?</label>
+                <div id="input-consumidor-habitual">
+                  <span>Sí</span><input type="radio" name="consumidor" /> <span>No</span><input type="radio"
+                    name="consumidor" />
+                </div>
+    
+    
+                  <label for="promociones" id="label-recibir-notificaciones">Marca el casillero si deseas recibir
+                    promociones vía e-mail </label>
+                  <input type="checkbox" id="check-recibir-notificaciones" />
+                
+              </div>
+            </fieldset>
+    
+            <!-- Mensajes -->
+            <fieldset>
+              <legend>Tu mensaje</legend>
+              <div id="contact-form-mensaje">
+                <label for="nombre" id="label-mensaje">Escribe aquí tu sugerencia o consulta:</label>
+                <textarea name="consulta" id="input-mensaje" cols="60" rows="10"></textarea>
+              </div>
+            </fieldset>
+    
+            <!-- Acciones -->
+            <div id="contact-form-button-bar">
+              <input type="reset" name="Limpiar formulario" class="button" />
+              <input type="submit" class="button" />
+            </div>
+    
+          </form>
+        </main>
+    
+        <footer>
+          <span>(c) 2021 - Todos los derechos reservados</span>
+        </footer>
+      </div>
+    
+</body>
+</html>
