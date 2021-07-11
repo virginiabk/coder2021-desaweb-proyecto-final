@@ -176,10 +176,15 @@ nav ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
   nav ul li:hover {
     background-color: #8e7f7f;
-    color: #bbbbbb; }
+    color: #bbbbbb;
+    transition: width 1s;
+    background-image: linear-gradient(to bottom, #865858, #bbbbbb);
+    transition: all 100ms;
+    transform: skew(-10deg, 0deg); }
 
 section {
   text-align: center;

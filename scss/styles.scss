@@ -78,10 +78,15 @@ nav {
     flex-direction: row;
     list-style-type: none;
     justify-content: center;
+    align-items: center;
 
     li:hover {
       background-color: $secondary;
       color: $white;
+      transition: width 1s;
+      background-image: linear-gradient(to bottom, $primary, $white);
+      transition: all 100ms;
+      transform: skew(-10deg, 0deg);
     }
   }
 }
