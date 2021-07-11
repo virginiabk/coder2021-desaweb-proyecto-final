@@ -1,6 +1,11 @@
 /*******************  STYLES *******************/
+$defaultSpace: 10px;
 
 @import "colors";
+@import "contact";
+@import "recetas";
+
+
 
 a {
   color: black;
@@ -16,8 +21,8 @@ article {
   border: 1px solid $primary;
   border-radius: 10px;
   display: inline-block;
-  margin: 15px;
-  padding: 20px;
+  margin: $defaultSpace * 1.5;
+  padding: $defaultSpace * 2;
   text-align: center;
   width: 200px;
 }
@@ -25,7 +30,7 @@ article {
 aside {
   grid-area: aside;
   text-align: center;
-  padding: 0px 20px 0px 20px;
+  padding: 0 $defaultSpace*2 0 $defaultSpace*2;
 }
 
 
@@ -36,15 +41,20 @@ body {
   background-size: 5%;
   background-color: $background;
   font-family: 'Baloo 2', sans-serif;
-  padding-bottom: 50px;
+  padding-bottom: $defaultSpace*5;
   margin: 0;
 }
+
+
 
 footer {
   grid-area: footer;
   text-align: center;
-  padding-top: 20px;
+  padding-top: $defaultSpace*2;
 }
+
+
+
 
 h1 {
   color: $primary;
@@ -54,6 +64,8 @@ h1 {
 h3 {
   color: $primary;
 }
+
+
 
 main {
   grid-area: main;
@@ -82,9 +94,34 @@ section {
   justify-content: left;
 }
 
-  
+
+
+table {
+  text-align: left;
+}
+
+td {
+  background: $white;
+  padding: $defaultSpace*0.5;
+}
+
+th {
+  background: $secondary;
+  padding: $defaultSpace;
+}
+
 
 /******************* CLASS STYLES *******************/
+.button {
+  background-color: $primary;
+  color: $background;
+  padding: $defaultSpace;
+  margin: $defaultSpace*0.5;
+
+  &:hover {
+    color: $white;
+  }
+}
 
 .go-home {
   margin: 0;
@@ -94,7 +131,7 @@ section {
 .price {
   margin: 1px;
   border-radius: 5px;
-  padding: 5px;
+  padding: $defaultSpace*0.5;
   background-color: $white;
   font-weight: bolder;
   color: $primary;
@@ -143,16 +180,16 @@ section {
     "menu menu"
     "aside main"
     "footer footer";
-  row-gap: 10px;
-  column-gap: 10px;
+  row-gap: $defaultSpace;
+  column-gap: $defaultSpace;
 }
 
 #grid-content {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "banner""menu""main""footer";
-  row-gap: 10px;
-  column-gap: 10px;
+  row-gap: $defaultSpace;
+  column-gap: $defaultSpace;
 }
 
 #menu {
@@ -165,132 +202,4 @@ section {
 #logo {
   display: flex;
   justify-content: space-between;
-}
-
-/******************* RECETAS *******************/
-#detalle-receta {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:  "nombre         nombre          nombre"
-                        "image          tiempo          tiempo"
-                        "image          porciones       porciones"
-                        "image          fuente          fuente"
-                        "ingredientes   preparacion     preparacion";
-}
-
-#receta-nombre {
-  grid-area: nombre;
-}
-
-#receta-label-fuente {
-  grid-area: fuente;
-}
-
-#receta-imagen {
-  grid-area: image;
-  justify-self: center;
-  border: 2px solid $secondary;
-  border-radius: 100%;
-}
-
-#receta-label-tiempo {
-  grid-area: tiempo;
-}
-
-#receta-label-porciones {
-  grid-area: porciones;
-}
-
-#receta-ingredientes {
-  grid-area: ingredientes;
-}
-
-#receta-preparacion {
-  grid-area: preparacion;
-}
-
-/******************* CONTACT FORM *******************/
-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: stretch;
-}
-
-#contact-form-datos {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "labelNombre inputNombre inputNombre"
-      "labelEmail inputEmail inputEmail"
-      "labelResidencia inputResidencia inputResidencia"
-      "labelConsumidorHabitual labelConsumidorHabitual inputConsumidorHabitual"
-      "labelNotificaciones labelNotificaciones checkNotificaciones";
-  column-gap: 50px;
-}
-
-#label-nombre {
-  grid-area: labelNombre;
-}
-
-#input-nombre {
-  grid-area: inputNombre;
-}
-
-#label-email {
-  grid-area: labelEmail;
-}
-
-#input-email {
-  grid-area: inputEmail;
-}
-
-#label-residencia {
-  grid-area: labelResidencia;
-}
-
-#input-residencia {
-  grid-area: inputResidencia;
-}
-
-#label-consumidor-habitual {
-  grid-area: labelConsumidorHabitual;
-}
-
-#input-consumidor-habitual {
-  grid-area: inputConsumidorHabitual;
-}
-
-#aaarecibir-notificaciones {
-  grid-area: recibirNotificaciones;
-}
-
-#label-recibir-notificaciones {
-  grid-area: labelNotificaciones;
-}
-
-#check-recibir-notificaciones {
-  grid-area: checkNotificaciones;
-}
-
-#contact-form-mensaje {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "labelMensaje""inputMensaje";
-  row-gap: 10px;
-  column-gap: 10px;
-  align-items: flex-start;
-}
-
-#label-mensaje {
-  grid-area: labelMensaje;
-}
-
-#input-mensaje {
-  grid-area: inputMensaje;
-}
-
-#contact-form-button-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

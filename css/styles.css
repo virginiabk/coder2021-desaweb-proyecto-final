@@ -1,4 +1,130 @@
 /*******************  STYLES *******************/
+/******************* CONTACT FORM *******************/
+fieldset {
+  width: 600px;
+  border: 1px solid #865858;
+  border-radius: 5px; }
+
+form {
+  display: grid;
+  justify-content: center;
+  margin: 0 auto; }
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch; }
+
+input {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #bbbbbb;
+  opacity: 0.6; }
+
+select {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #bbbbbb;
+  opacity: 0.6; }
+
+textarea {
+  border: 1px solid #bbbbbb;
+  opacity: 0.6; }
+
+#contact-form-datos {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "labelNombre inputNombre inputNombre" "labelEmail inputEmail inputEmail" "labelResidencia inputResidencia inputResidencia" "labelConsumidorHabitual labelConsumidorHabitual inputConsumidorHabitual" "labelNotificaciones labelNotificaciones checkNotificaciones";
+  column-gap: 50px; }
+
+#label-nombre {
+  grid-area: labelNombre; }
+
+#input-nombre {
+  grid-area: inputNombre; }
+
+#label-email {
+  grid-area: labelEmail; }
+
+#input-email {
+  grid-area: inputEmail; }
+
+#label-residencia {
+  grid-area: labelResidencia; }
+
+#input-residencia {
+  grid-area: inputResidencia; }
+
+#label-consumidor-habitual {
+  grid-area: labelConsumidorHabitual; }
+
+#input-consumidor-habitual {
+  grid-area: inputConsumidorHabitual; }
+
+#aaarecibir-notificaciones {
+  grid-area: recibirNotificaciones; }
+
+#label-recibir-notificaciones {
+  grid-area: labelNotificaciones; }
+
+#check-recibir-notificaciones {
+  grid-area: checkNotificaciones; }
+
+#contact-form-mensaje {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "labelMensaje" "inputMensaje";
+  row-gap: 10px;
+  column-gap: 10px;
+  align-items: flex-start; }
+
+#label-mensaje {
+  grid-area: labelMensaje; }
+
+#input-mensaje {
+  grid-area: inputMensaje; }
+
+#contact-form-button-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/******************* RECETAS *******************/
+.receta-imagen {
+  justify-self: center;
+  border: 2px solid #8e7f7f;
+  border-radius: 100%; }
+
+/*** MAP ***/
+/*** EACH LOOP ***/
+#receta-imagen {
+  grid-area: image; }
+
+#receta-nombre {
+  grid-area: nombre; }
+
+#receta-label-fuente {
+  grid-area: fuente; }
+
+#receta-label-tiempo {
+  grid-area: tiempo; }
+
+#receta-label-porciones {
+  grid-area: porciones; }
+
+#receta-ingredientes {
+  grid-area: ingredientes; }
+
+#receta-preparacion {
+  grid-area: preparacion; }
+
+/*** GRID DEFINITION ***/
+#detalle-receta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "nombre         nombre          nombre" "image          tiempo          tiempo" "image          porciones       porciones" "image          fuente          fuente" "ingredientes   preparacion     preparacion"; }
+
 a {
   color: black;
   text-decoration: none;
@@ -18,7 +144,7 @@ article {
 aside {
   grid-area: aside;
   text-align: center;
-  padding: 0px 20px 0px 20px; }
+  padding: 0 20px 0 20px; }
 
 body {
   background-image: url("../img/pecan-bbbbbb.svg");
@@ -62,7 +188,26 @@ section {
   flex-wrap: wrap;
   justify-content: left; }
 
+table {
+  text-align: left; }
+
+td {
+  background: #bbbbbb;
+  padding: 5px; }
+
+th {
+  background: #8e7f7f;
+  padding: 10px; }
+
 /******************* CLASS STYLES *******************/
+.button {
+  background-color: #865858;
+  color: #e2d5d5;
+  padding: 10px;
+  margin: 5px; }
+  .button:hover {
+    color: #bbbbbb; }
+
 .go-home {
   margin: 0;
   padding: 0; }
@@ -128,98 +273,3 @@ section {
 #logo {
   display: flex;
   justify-content: space-between; }
-
-/******************* RECETAS *******************/
-#detalle-receta {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "nombre         nombre          nombre" "image          tiempo          tiempo" "image          porciones       porciones" "image          fuente          fuente" "ingredientes   preparacion     preparacion"; }
-
-#receta-nombre {
-  grid-area: nombre; }
-
-#receta-label-fuente {
-  grid-area: fuente; }
-
-#receta-imagen {
-  grid-area: image;
-  justify-self: center;
-  border: 2px solid #8e7f7f;
-  border-radius: 100%; }
-
-#receta-label-tiempo {
-  grid-area: tiempo; }
-
-#receta-label-porciones {
-  grid-area: porciones; }
-
-#receta-ingredientes {
-  grid-area: ingredientes; }
-
-#receta-preparacion {
-  grid-area: preparacion; }
-
-/******************* CONTACT FORM *******************/
-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: stretch; }
-
-#contact-form-datos {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "labelNombre inputNombre inputNombre" "labelEmail inputEmail inputEmail" "labelResidencia inputResidencia inputResidencia" "labelConsumidorHabitual labelConsumidorHabitual inputConsumidorHabitual" "labelNotificaciones labelNotificaciones checkNotificaciones";
-  column-gap: 50px; }
-
-#label-nombre {
-  grid-area: labelNombre; }
-
-#input-nombre {
-  grid-area: inputNombre; }
-
-#label-email {
-  grid-area: labelEmail; }
-
-#input-email {
-  grid-area: inputEmail; }
-
-#label-residencia {
-  grid-area: labelResidencia; }
-
-#input-residencia {
-  grid-area: inputResidencia; }
-
-#label-consumidor-habitual {
-  grid-area: labelConsumidorHabitual; }
-
-#input-consumidor-habitual {
-  grid-area: inputConsumidorHabitual; }
-
-#aaarecibir-notificaciones {
-  grid-area: recibirNotificaciones; }
-
-#label-recibir-notificaciones {
-  grid-area: labelNotificaciones; }
-
-#check-recibir-notificaciones {
-  grid-area: checkNotificaciones; }
-
-#contact-form-mensaje {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "labelMensaje" "inputMensaje";
-  row-gap: 10px;
-  column-gap: 10px;
-  align-items: flex-start; }
-
-#label-mensaje {
-  grid-area: labelMensaje; }
-
-#input-mensaje {
-  grid-area: inputMensaje; }
-
-#contact-form-button-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }

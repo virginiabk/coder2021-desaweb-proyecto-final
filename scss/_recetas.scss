@@ -1,0 +1,34 @@
+/******************* RECETAS *******************/
+.receta-imagen {
+    justify-self: center;
+    border: 2px solid $secondary;
+    border-radius: 100%;
+}
+
+/*** MAP ***/
+$secciones-receta: (imagen: image,
+    nombre: nombre,
+    label-fuente: fuente,
+    label-tiempo: tiempo,
+    label-porciones: porciones,
+    ingredientes: ingredientes,
+    preparacion: preparacion);
+
+/*** EACH LOOP ***/
+@each $section,
+$area in $secciones-receta {
+    #receta-#{$section} {
+        grid-area: $area;
+    }
+}
+
+/*** GRID DEFINITION ***/
+#detalle-receta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "nombre         nombre          nombre"
+        "image          tiempo          tiempo"
+        "image          porciones       porciones"
+        "image          fuente          fuente"
+        "ingredientes   preparacion     preparacion";
+}

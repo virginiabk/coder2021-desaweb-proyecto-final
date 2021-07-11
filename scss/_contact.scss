@@ -1,0 +1,119 @@
+@import "colors";
+
+/******************* CONTACT FORM *******************/
+fieldset {
+    width: 600px;
+    border: 1px solid $primary;
+    border-radius: 5px;
+}
+
+form {
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+}
+
+input {
+    margin: $defaultSpace*0.5;
+    padding: $defaultSpace*0.5;
+    border: 1px solid $white;
+    opacity: 0.6
+}
+
+select {
+    margin: $defaultSpace*0.5;
+    padding: $defaultSpace*0.5;
+    border: 1px solid $white;
+    opacity: 0.6
+}
+
+textarea {
+    border: 1px solid $white;
+    opacity: 0.6;
+}
+
+
+#contact-form-datos {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "labelNombre inputNombre inputNombre"
+        "labelEmail inputEmail inputEmail"
+        "labelResidencia inputResidencia inputResidencia"
+        "labelConsumidorHabitual labelConsumidorHabitual inputConsumidorHabitual"
+        "labelNotificaciones labelNotificaciones checkNotificaciones";
+    column-gap: $defaultSpace*5;
+}
+
+#label-nombre {
+    grid-area: labelNombre;
+}
+
+#input-nombre {
+    grid-area: inputNombre;
+}
+
+#label-email {
+    grid-area: labelEmail;
+}
+
+#input-email {
+    grid-area: inputEmail;
+}
+
+#label-residencia {
+    grid-area: labelResidencia;
+}
+
+#input-residencia {
+    grid-area: inputResidencia;
+}
+
+#label-consumidor-habitual {
+    grid-area: labelConsumidorHabitual;
+}
+
+#input-consumidor-habitual {
+    grid-area: inputConsumidorHabitual;
+}
+
+#aaarecibir-notificaciones {
+    grid-area: recibirNotificaciones;
+}
+
+#label-recibir-notificaciones {
+    grid-area: labelNotificaciones;
+}
+
+#check-recibir-notificaciones {
+    grid-area: checkNotificaciones;
+}
+
+#contact-form-mensaje {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "labelMensaje""inputMensaje";
+    row-gap: $defaultSpace;
+    column-gap: $defaultSpace;
+    align-items: flex-start;
+}
+
+#label-mensaje {
+    grid-area: labelMensaje;
+}
+
+#input-mensaje {
+    grid-area: inputMensaje;
+}
+
+#contact-form-button-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
