@@ -47,14 +47,17 @@ body {
   font-family: 'Baloo 2', sans-serif;
   padding-bottom: $defaultSpace*5;
   margin: 0;
+  
 }
 
 
 
 footer {
+  background-image: linear-gradient(to top, $primary, $white);
   grid-area: footer;
   text-align: center;
   padding-top: $defaultSpace*2;
+  
 }
 
 

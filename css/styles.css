@@ -68,6 +68,7 @@ body {
   margin: 0; }
 
 footer {
+  background-image: linear-gradient(to top, #865858, #bbbbbb);
   grid-area: footer;
   text-align: center;
   padding-top: 20px; }
