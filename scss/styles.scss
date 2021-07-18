@@ -189,6 +189,33 @@ th {
   column-gap: $defaultSpace;
 }
 
+@media(max-width: 600px) {
+  #grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:  "banner"
+                          "menu"
+                          "aside"
+                          "main"
+                          "footer";
+    row-gap: $defaultSpace;
+    column-gap: $defaultSpace;
+  }
+
+  section {
+    justify-content: center;
+  }
+
+  #menu ul {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
 #grid-content {
   display: grid;
   grid-template-columns: 1fr;

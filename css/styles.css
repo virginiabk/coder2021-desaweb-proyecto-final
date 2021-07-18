@@ -1,4 +1,6 @@
 /*******************  STYLES *******************/
+/*******************  COLORS *******************/
+/*******************  COLORS *******************/
 /******************* CONTACT FORM *******************/
 fieldset {
   width: 600px;
@@ -261,6 +263,19 @@ th {
   grid-template-areas: "banner banner" "menu menu" "aside main" "footer footer";
   row-gap: 10px;
   column-gap: 10px; }
+
+@media (max-width: 600px) {
+  #grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner" "menu" "aside" "main" "footer";
+    row-gap: 10px;
+    column-gap: 10px; }
+  section {
+    justify-content: center; }
+  #menu ul {
+    justify-content: center;
+    flex-direction: column; } }
 
 #grid-content {
   display: grid;
