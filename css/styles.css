@@ -1,94 +1,4 @@
 /*******************  STYLES *******************/
-fieldset {
-  width: 600px;
-  border: 1px solid #865858;
-  border-radius: 5px; }
-
-form {
-  display: grid;
-  justify-content: center;
-  margin: 0 auto; }
-
-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: stretch; }
-
-input {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #bbbbbb;
-  opacity: 0.6; }
-
-select {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid #bbbbbb;
-  opacity: 0.6; }
-
-textarea {
-  border: 1px solid #bbbbbb;
-  opacity: 0.6; }
-
-#contact-form-datos {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "labelNombre inputNombre inputNombre" "labelEmail inputEmail inputEmail" "labelResidencia inputResidencia inputResidencia" "labelConsumidorHabitual labelConsumidorHabitual inputConsumidorHabitual" "labelNotificaciones labelNotificaciones checkNotificaciones";
-  column-gap: 50px; }
-
-#label-nombre {
-  grid-area: labelNombre; }
-
-#input-nombre {
-  grid-area: inputNombre; }
-
-#label-email {
-  grid-area: labelEmail; }
-
-#input-email {
-  grid-area: inputEmail; }
-
-#label-residencia {
-  grid-area: labelResidencia; }
-
-#input-residencia {
-  grid-area: inputResidencia; }
-
-#label-consumidor-habitual {
-  grid-area: labelConsumidorHabitual; }
-
-#input-consumidor-habitual {
-  grid-area: inputConsumidorHabitual; }
-
-#aaarecibir-notificaciones {
-  grid-area: recibirNotificaciones; }
-
-#label-recibir-notificaciones {
-  grid-area: labelNotificaciones; }
-
-#check-recibir-notificaciones {
-  grid-area: checkNotificaciones; }
-
-#contact-form-mensaje {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "labelMensaje" "inputMensaje";
-  row-gap: 10px;
-  column-gap: 10px;
-  align-items: flex-start; }
-
-#label-mensaje {
-  grid-area: labelMensaje; }
-
-#input-mensaje {
-  grid-area: inputMensaje; }
-
-#contact-form-button-bar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
 .receta-imagen {
   justify-self: center;
   border: 2px solid #8e7f7f;
@@ -173,20 +83,29 @@ main {
   grid-area: main;
   justify-self: center; }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: center;
-  align-items: center; }
-  nav ul li:hover {
-    background-color: #8e7f7f;
-    color: #bbbbbb;
-    transition: width 1s;
-    background-image: linear-gradient(to bottom, #865858, #bbbbbb);
-    transition: all 100ms;
-    transform: skew(-10deg, 0deg); }
+nav {
+  background-color: #865858;
+  background-size: 5%; }
 
+/*
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+
+    li:hover {
+      background-color: $secondary;
+      color: $white;
+      transition: width 1s;
+      background-image: linear-gradient(to bottom, $primary, $white);
+      transition: all 100ms;
+      transform: skew(-10deg, 0deg);
+    }
+  }
+}*/
 section {
   text-align: center;
   display: flex;
@@ -206,6 +125,10 @@ section {
 .go-home {
   margin: 0;
   padding: 0; }
+
+.img-48px {
+  width: 48px;
+  height: 48px; }
 
 .price {
   margin: 1px;
@@ -240,9 +163,11 @@ section {
   border-radius: 25px; }
 
 #campos-pecan {
+  display: flex;
+  flex-direction: row;
   font-family: 'Lobster', cursive;
-  font-size: xxx-large;
-  align-self: center;
+  font-size: xx-large;
+  align-items: center;
   padding-right: 5%; }
 
 #grid {

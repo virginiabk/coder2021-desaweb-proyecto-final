@@ -2,7 +2,6 @@
 $defaultSpace: 10px;
 
 @import "colors";
-@import "contact";
 @import "recetas";
 
 
@@ -78,6 +77,11 @@ main {
 }
 
 nav {
+  background-color:$primary;
+  background-size: 5%;
+}
+/*
+nav {
   ul {
     display: flex;
     flex-direction: row;
@@ -94,7 +98,7 @@ nav {
       transform: skew(-10deg, 0deg);
     }
   }
-}
+}*/
 
 section {
   text-align: center;
@@ -120,6 +124,11 @@ section {
 .go-home {
   margin: 0;
   padding: 0;
+}
+
+.img-48px {
+  width: 48px;
+  height: 48px;
 }
 
 .price {
@@ -161,11 +170,14 @@ section {
 }
 
 #campos-pecan {
+  display: flex;
+  flex-direction: row;
   font-family: 'Lobster', cursive;
-  font-size: xxx-large;
-  align-self: center;
+  font-size: xx-large;
+  align-items: center;
   padding-right: 5%;
 }
+
 
 #grid {
   display: grid;
@@ -208,7 +220,7 @@ section {
 #grid-content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "banner""menu""main""footer";
+  grid-template-areas: "banner" "menu""main""footer";
   row-gap: $defaultSpace;
   column-gap: $defaultSpace;
 }
