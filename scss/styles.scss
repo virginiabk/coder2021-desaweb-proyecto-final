@@ -25,6 +25,11 @@ article {
   padding: $defaultSpace * 2;
   text-align: center;
   width: 200px;
+
+  &:hover {
+    transition: all 100ms;
+    transform: scale(1.05, 1.05);
+  }
 }
 
 aside {
@@ -97,22 +102,6 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
-}
-
-
-
-table {
-  text-align: left;
-}
-
-td {
-  background: $white;
-  padding: $defaultSpace*0.5;
-}
-
-th {
-  background: $secondary;
-  padding: $defaultSpace;
 }
 
 
@@ -193,11 +182,11 @@ th {
   #grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:  "banner"
-                          "menu"
-                          "aside"
-                          "main"
-                          "footer";
+    grid-template-areas: "banner"
+      "menu"
+      "aside"
+      "main"
+      "footer";
     row-gap: $defaultSpace;
     column-gap: $defaultSpace;
   }

@@ -1,7 +1,4 @@
 /*******************  STYLES *******************/
-/*******************  COLORS *******************/
-/*******************  COLORS *******************/
-/******************* CONTACT FORM *******************/
 fieldset {
   width: 600px;
   border: 1px solid #865858;
@@ -92,7 +89,6 @@ textarea {
   flex-direction: column;
   justify-content: center; }
 
-/******************* RECETAS *******************/
 .receta-imagen {
   justify-self: center;
   border: 2px solid #8e7f7f;
@@ -142,6 +138,9 @@ article {
   padding: 20px;
   text-align: center;
   width: 200px; }
+  article:hover {
+    transition: all 100ms;
+    transform: scale(1.05, 1.05); }
 
 aside {
   grid-area: aside;
@@ -194,17 +193,6 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left; }
-
-table {
-  text-align: left; }
-
-td {
-  background: #bbbbbb;
-  padding: 5px; }
-
-th {
-  background: #8e7f7f;
-  padding: 10px; }
 
 /******************* CLASS STYLES *******************/
 .button {
