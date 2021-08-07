@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./../css/styles.css">
 </head>
+
 <body>
-    <div id="grid-content">
-      <header id="banner">
-        <div >
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div id="grid-content">
+    <header id="banner">
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
           <div class="container-fluid">
             <a id="campos-pecan" class="navbar-brand" href="../index.html">
-              <img class="img-48px" src="../img/pecan-bbbbbb.svg" alt="icon">  
+              <img class="img-48px" src="../img/pecan-bbbbbb.svg" alt="icon">
               Campos de pecan
-              </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 " >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="../index.html">Home</a>
                 </li>
@@ -45,62 +47,106 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./contacto.html">Contacto</a>
                 </li>
-                
+
               </ul>
-              
+
             </div>
           </div>
         </nav>
-        </div>
-        
-    
-      </header>
-
-
-      <div id="menu"></div>
-  
-       <!-- <a href="../index.html" class="go-home">
-          <header id="banner">
-            <div id="logo">
-              <img id="banner-image" src="../img/pecan-pie.png" alt="Logo" />
-              <h1 id="campos-pecan">Campos de Pecán</h1>
-            </div>
-          </header>
-        </a>
-    
-        <nav id="menu">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="./propiedades.html">Propiedades</a></li>
-              <li><a href="./recetas.html">Recetas</a></li>
-              <li><a href="./contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-    -->
-    
-        <main>
-          <h1>Nuestros productos</h1>
-    
-          <section>
-            <article>
-              <img src="../img/pecan-icon-128.png" class="product"  alt="pecanas"/>
-              <p class="product-name">Mermelada de frambuesa y pecán</p>
-              <p class="price">$250</p>
-            </article>
-            <article>
-              <img src="./../img/pecan-caramelizada.jpg" class="product product-128" alt="pecanas" />
-              <p class="product-name">Nueces pecan caramelizadas x 200gr</p>
-              <p class="price">$250</p>
-            </article>
-          </section>
-        </main>
-    
-        <footer class="fixed-bottom">
-          <span>(c) 2021 - Todos los derechos reservados</span>
-        </footer>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </header>
+
+    <div id="menu"></div>
+
+    <main>
+      <h1>Nuestros productos</h1>
+
+      <section>
+        <article>
+          <img src="../img/pecan-icon-128.png" class="product" alt="pecanas" />
+          <p class="product-name">Mermelada de frambuesa y pecán</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i> </p>
+        </article>
+        <article>
+          <img src="./../img/pecan-caramelizada.jpg" class="product product-128" alt="pecanas" />
+          <p class="product-name">Nueces pecan caramelizadas x 200gr</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article>
+          <img src="./../img/mermelada-naranja.jpg" class="product product-128" alt="foto-mermelada" />
+          <p class="product-name">Mermelada de pecan y naranja</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article>
+          <img src="./../img/mermelada-frambuesa.jpg" class="product product-128" alt="foto-mermelada" />
+          <p class="product-name">Mermelada de frambuesa y pecan</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article>
+          <img src="./../img/kit-leche-vegetal-1.jpg" class="product product-128" alt="foto-kit-leche" />
+          <p class="product-name">Kit leche pecan</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article>
+          <img src="./../img/pecan-granel.jpg" class="product product-128" alt="foto-pecanas" />
+          <p class="product-name">Pecan pelada x 500 g</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+
+        <article>
+          <img src="./../img/pecan-granel.jpg" class="product product-128" alt="foto-pecanas" />
+          <p class="product-name">Pecan pelada x 1 Kg</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article>
+          <img src="./../img/mermelada.jpg" class="product product-128" alt="mermelada"/>
+          <p class="product-name">Mermelada multifruta con pecan</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article>
+          <img src="./../img/pecan-caramelizada.jpg" class="product product-128" alt="pecanas" />
+          <p class="product-name">Nueces pecan caramelizadas</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart"></i></p>
+        </article>
+        <article >
+          <img src="./../img/cookies.jpg" class="product product-128" alt="cookies" />
+          <p class="product-name">Cookies de pecan, dátiles y harina de almendras</p>
+          <p class="price" data-bs-toggle="modal" data-bs-target="#staticBackdrop">$250 <i class="bi-cart" ></i></p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="fixed-bottom">
+      <a href="http://www.facebook.com" target="blank"><i class="bi-facebook social"></i></a>
+      <a href="http://www.instagram.com" target="blank"><i class="bi-instagram social"></i></a>
+      <a href="http://www.twitter.com" target="blank"><i class="bi-twitter social"></i></a>   
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">🤎 Producto agregado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Gracias por elegirnos!
+          <p>Tu producto ya fue agregado al carrito.🎉🎉</p>
+          <p>Sigue revisando otros productos que puedan interesarte y armamos un único envío con todo tu pedido. 🤑</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark">Continuar comprando</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
+
 </html>
